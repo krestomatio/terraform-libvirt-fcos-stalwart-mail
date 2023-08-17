@@ -17,7 +17,7 @@ The following are the dependencies to create the VM with this module:
 
 | Name | Version |
 |------|---------|
-| <a name="provider_template"></a> [template](#provider\_template) | 2.2.0 |
+| <a name="provider_template"></a> [template](#provider\_template) | n/a |
 
 ## Modules
 
@@ -49,7 +49,7 @@ The following are the dependencies to create the VM with this module:
 | <a name="input_data_volume_size"></a> [data\_volume\_size](#input\_data\_volume\_size) | Node default data volume size in bytes | `number` | `null` | no |
 | <a name="input_etc_hosts"></a> [etc\_hosts](#input\_etc\_hosts) | /etc/host list | <pre>list(<br>    object(<br>      {<br>        ip       = string<br>        hostname = string<br>        fqdn     = string<br>      }<br>    )<br>  )</pre> | `null` | no |
 | <a name="input_etc_hosts_extra"></a> [etc\_hosts\_extra](#input\_etc\_hosts\_extra) | /etc/host extra block | `string` | `null` | no |
-| <a name="input_external_fqdn"></a> [external\_fqdn](#input\_external\_fqdn) | FQDN to access Harbor | `string` | n/a | yes |
+| <a name="input_external_fqdn"></a> [external\_fqdn](#input\_external\_fqdn) | FQDN to access Stalwart mail | `string` | n/a | yes |
 | <a name="input_fqdn"></a> [fqdn](#input\_fqdn) | Node FQDN | `string` | n/a | yes |
 | <a name="input_ignition_pool"></a> [ignition\_pool](#input\_ignition\_pool) | Default ignition files pool | `string` | `null` | no |
 | <a name="input_image"></a> [image](#input\_image) | Stalwart mail container image | <pre>object(<br>    {<br>      name    = optional(string, "docker.io/stalwartlabs/mail-server")<br>      version = optional(string, "latest")<br>    }<br>  )</pre> | <pre>{<br>  "name": "docker.io/stalwartlabs/mail-server",<br>  "version": "latest"<br>}</pre> | no |

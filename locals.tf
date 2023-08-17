@@ -27,7 +27,7 @@ locals {
       # owner
       chown $$${stalwart_mail_proxy_uid}:$$${stalwart_mail_proxy_gid} "$$${stalwart_mail_cert_folder_path}" "$$${stalwart_mail_cert_path}" "$$${stalwart_mail_key_path}"
       # permissions
-      chmod 0660 "$$${stalwart_mail_cert_path}" "$$${stalwart_mail_key_path}"
+      chmod 0600 "$$${stalwart_mail_cert_path}" "$$${stalwart_mail_key_path}"
 
       # restart container
       if podman ps stalwart-mail &> /dev/null

@@ -30,7 +30,7 @@ variable "image" {
 
 variable "external_fqdn" {
   type        = string
-  description = "FQDN to access Harbor"
+  description = "FQDN to access Stalwart mail"
 }
 
 variable "cpus_limit" {

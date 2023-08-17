@@ -61,6 +61,7 @@ storage:
             -p 993:993 \
             -p 4190:4190 \
             -p 8080:8080 \
+            --volume /etc/localtime:/etc/localtime:ro \
             --volume "${local.data_volume_path}:/opt/stalwart-mail" \
             --name stalwart-mail ${local.stalwart_mail_image}
           podman generate systemd --new \
