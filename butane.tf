@@ -71,7 +71,7 @@ storage:
             --after stalwart-mail-image-pull.service \
             --name stalwart-mail > /etc/systemd/system/stalwart-mail.service
           systemctl daemon-reload
-          systemctl enable stalwart-mail.service
+          systemctl enable --now stalwart-mail.service
           echo "stalwart-mail service installed..."
 systemd:
   units:
