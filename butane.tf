@@ -88,9 +88,8 @@ systemd:
         [Service]
         Type=oneshot
         RemainAfterExit=yes
-        Restart=on-failure
-        RestartSec=10
-        TimeoutStartSec=180
+        Restart=no
+        TimeoutStartSec=90
         ExecStart=/usr/bin/podman pull ${local.stalwart_mail_image}
 
         [Install]
@@ -111,15 +110,12 @@ systemd:
         OnSuccess=stalwart-mail.service
         ConditionPathExists=/usr/local/bin/stalwart-mail-installer.sh
         ConditionPathExists=!/var/lib/%N.done
-        StartLimitInterval=500
-        StartLimitBurst=3
 
         [Service]
         Type=oneshot
         RemainAfterExit=yes
-        Restart=on-failure
-        RestartSec=60
-        TimeoutStartSec=300
+        Restart=no
+        TimeoutStartSec=90
         ExecStart=/usr/local/bin/stalwart-mail-installer.sh
         ExecStart=/bin/touch /var/lib/%N.done
 
